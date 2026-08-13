@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Official Website for Commerce Tutorials By Anjali Srivastava - Best Commerce Coaching Institute in Indira Nagar, Lucknow",
+  "description": "Static landing page for Commerce Tutorials By Anjali Srivastava - Best Commerce Coaching Institute in Indira Nagar, Lucknow",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

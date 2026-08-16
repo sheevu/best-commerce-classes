@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Tutorials By Anjali Srivastava | Performance & Growth Infographic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigoPrimary: '#4f46e5',
+                        indigoDark: '#1e1b4b',
+                        cyanAccent: '#06b6d4',
+                        amberAccent: '#f59e0b',
+                        emeraldAccent: '#10b981',
+                        slateBg: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slateBg text-slate-800 font-sans antialiased leading-relaxed">
+
+    <!-- Palette: Vibrant Indigo & Cyan Spectrum (#4f46e5, #06b6d4, #f59e0b, #10b981) -->
+
+    <!-- Narrative & Structure Plan: 
+         1. Header & Hero Dashboard Banner with Key Performance Indicators (Rating, Batch Size, Years, Success).
+         2. Executive Summary & Batch Benchmark Analysis (Bar Chart comparing small 12-15 batch size vs industry 80-100 standard).
+         3. Academic Level Distribution & Enrollment Breakdown (Donut Chart showing Class IX-X, XI, XII, B.Com/CUET).
+         4. Core Subject Score Elevation (Grouped Bar Chart analyzing pre-coaching vs post-coaching student mark gains).
+         5. Career Aspirations & Pathway Tracking (Pie Chart illustrating CA, CS, CMA, CUET & BBA interest).
+         6. Pedagogical Process & 4-Pillar Learning System (Structured Tailwind HTML cards with Unicode icons).
+         7. Interactive Top 10 FAQ Accordion (Parent and student quick reference).
+         8. Footer & Direct Contact Information Hub.
+    -->
+
+    <!-- Visualization Mapping:
+         1. Batch Size Benchmark -> Goal: Compare -> Horizontal Bar Chart (Chart.js Canvas) -> Illustrates small batch individual focus vs traditional factory coaching halls.
+         2. Student Level Distribution -> Goal: Composition -> Donut Chart (Chart.js Canvas) -> Shows batch enrollment breakdown across Class IX-X, XI, XII, and B.Com/CUET.
+         3. Subject Score Elevation -> Goal: Change / Improvement -> Grouped Bar Chart (Chart.js Canvas) -> Demonstrates pre-coaching vs post-coaching average marks in Accountancy, Economics, BST.
+         4. Post-12th Career Pathways -> Goal: Composition -> Doughnut Chart (Chart.js Canvas) -> Details student career focus across CA, CS, CMA, BBA, and CUET streams.
+         5. Teaching Methodology Flow -> Goal: Organize / Process -> Structured HTML/CSS Grid Cards -> Step-by-step learning loop using native Tailwind styling.
+         Confirming NO SVG graphics and NO Mermaid JS were used anywhere in this document.
+    -->
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-indigoDark/95 backdrop-blur-md text-white border-b border-indigo-900/50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-black text-cyanAccent">📈</span>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg tracking-tight text-white leading-tight">Commerce Tutorials</h1>
+                    <p class="text-xs text-cyan-300">By Anjali Srivastava • Indira Nagar, Lucknow</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#overview" class="hover:text-cyanAccent transition">Overview</a>
+                <a href="#analytics" class="hover:text-cyanAccent transition">Academic Metrics</a>
+                <a href="#subjects" class="hover:text-cyanAccent transition">Subject Growth</a>
+                <a href="#methodology" class="hover:text-cyanAccent transition">Methodology</a>
+                <a href="#faqs" class="hover:text-cyanAccent transition">FAQs</a>
+            </nav>
+            <a href="tel:+91 70224 19327" class="bg-cyanAccent hover:bg-cyan-400 text-slate-900 font-bold px-4 py-2 rounded-lg text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+                <span>📞</span> +91 70224 19327
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-indigoDark via-indigo-900 to-slate-900 text-white py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-indigo-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-indigo-800/60 border border-indigo-600/40 text-cyan-300 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                <span>⭐ 4.9 Rating (140+ Reviews)</span>
+                <span>•</span>
+                <span>Established 2018</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+                Where Concepts Become <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanAccent via-amberAccent to-emeraldAccent">Confidence</span>
+            </h2>
+            <p class="max-w-3xl mx-auto text-slate-300 text-sm sm:text-base lg:text-lg mb-8">
+                 Lucknow’s premier commerce coaching hub for CBSE, ICSE, ISC, and B.Com students. Building strong accounting logic, micro/macro economic mastery, and high-scoring exam techniques under 1-on-1 expert mentorship.
+            </p>
+
+            <!-- Key Metric Cards Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
+                <div class="bg-indigo-950/70 border border-indigo-800/60 p-5 rounded-xl shadow-md">
+                    <div class="text-amberAccent text-2xl font-black mb-1">12 - 15</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Max Batch Size</div>
+                    <p class="text-xs text-slate-300 mt-1">Guaranteed personal 1-on-1 focus vs 100-student factories.</p>
+                </div>
+                <div class="bg-indigo-950/70 border border-indigo-800/60 p-5 rounded-xl shadow-md">
+                    <div class="text-cyanAccent text-2xl font-black mb-1">8+ Years</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Teaching Expertise</div>
+                    <p class="text-xs text-slate-300 mt-1">Led by Anjali Srivastava with proven board mastery.</p>
+                </div>
+                <div class="bg-indigo-950/70 border border-indigo-800/60 p-5 rounded-xl shadow-md">
+                    <div class="text-emeraldAccent text-2xl font-black mb-1">90%+</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Board Score Rate</div>
+                    <p class="text-xs text-slate-300 mt-1">Students achieving top distinction marks annually.</p>
+                </div>
+                <div class="bg-indigo-950/70 border border-indigo-800/60 p-5 rounded-xl shadow-md">
+                    <div class="text-amberAccent text-2xl font-black mb-1">100%</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Offline AC Hub</div>
+                    <p class="text-xs text-slate-300 mt-1">Modern classrooms near Church Road, Indira Nagar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- SECTION 1: Batch Benchmark & Overview -->
+        <section id="overview" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-indigoPrimary uppercase tracking-widest">Section 1 • Strategic Advantage</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Small-Batch Learning vs. Commercial Coaching Factories</h3>
+                <p class="text-slate-600 text-sm mt-2 max-w-4xl">
+                    Standard commercial coaching institutes in Lucknow often accommodate 80 to 100 students per hall, leading to unaddressed doubts and passive learning. At Commerce Tutorials By Anjali Srivastava, class capacity is strictly capped at 12 to 15 students. This ensures active peer-group interaction, daily doubt resolution, and tailored academic tracking for every learner.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Data Insight Box -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="p-4 bg-indigo-50 border-l-4 border-indigoPrimary rounded-r-lg">
+                        <h4 class="font-bold text-indigoDark text-sm">Direct Mentorship Impact</h4>
+                        <p class="text-xs text-slate-700 mt-1">
+                            With only 15 students maximum per batch, every student's accountancy entries, economic diagrams, and business theory answers are evaluated individually during every session.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-emerald-50 border-l-4 border-emeraldAccent rounded-r-lg">
+                        <h4 class="font-bold text-emerald-900 text-sm">Real-Time Parent Transparency</h4>
+                        <p class="text-xs text-slate-700 mt-1">
+                            Weekly performance analysis reports and direct parent progress updates ensure zero surprises when final board results arrive.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chart Container -->
+                <div class="lg:col-span-7">
+                    <div class="chart-container">
+                        <canvas id="batchComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Enrollment Distribution & Level Breakdown -->
+        <section id="analytics" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-indigoPrimary uppercase tracking-widest">Section 2 • Academic Spectrum</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Student Enrollment Distribution Across Academic Streams</h3>
+                <p class="text-slate-600 text-sm mt-2 max-w-4xl">
+                    Our academic programs cater to learners from secondary school foundation up to undergraduate commerce studies. Senior secondary board candidates (Class XI & XII) constitute our core student body, supported by strong Class IX & X early foundations and specialized B.Com university modules.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Chart Container -->
+                <div class="lg:col-span-6">
+                    <div class="chart-container">
+                        <canvas id="enrollmentDonutChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Contextual Analysis -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-sm text-indigoDark">Class XII Board Intensive (40%)</span>
+                            <span class="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-800 font-semibold rounded">Core Focus</span>
+                        </div>
+                        <p class="text-xs text-slate-600">
+                            Exhaustive preparation covering CBSE, ICSE, and ISC patterns, previous 10-year question (PYQ) drills, speed-writing workshops, and pre-board simulations.
+                        </p>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-sm text-indigoDark">Class XI Commerce Transition (35%)</span>
+                            <span class="text-xs px-2 py-0.5 bg-cyan-100 text-cyan-800 font-semibold rounded">Foundation</span>
+                        </div>
+                        <p class="text-xs text-slate-600">
+                            Building fundamental golden rules of accounting, double-entry ledger posting, microeconomic demand-supply curves, and statistical foundations.
+                        </p>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-sm text-indigoDark">Class IX & X Foundation + B.Com/CUET (25%)</span>
+                            <span class="text-xs px-2 py-0.5 bg-amber-100 text-amber-800 font-semibold rounded">Specialized</span>
+                        </div>
+                        <p class="text-xs text-slate-600">
+                            Early commerce exposure for high school students combined with specialized B.Com university support and CUET strategy guidance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Subject Performance Elevation -->
+        <section id="subjects" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-indigoPrimary uppercase tracking-widest">Section 3 • Measurable Growth</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Average Student Score Elevation (Pre vs. Post Coaching)</h3>
+                <p class="text-slate-600 text-sm mt-2 max-w-4xl">
+                    By shifting away from rote memorization toward conceptual understanding ("Why" before "How"), students demonstrate dramatic improvements across numerical Accountancy, diagrammatic Economics, and strategic Business Studies case study analyses.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7">
+                    <div class="chart-container">
+                        <canvas id="scoreElevationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-indigo-950 text-white rounded-xl p-5 shadow-sm">
+                        <h4 class="font-bold text-cyanAccent text-base mb-2">Subject Mastery Pillars</h4>
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amberAccent font-bold">▶</span>
+                                <div><strong class="text-white">Accountancy:</strong> Journal entry logic, numerical trick sheets, depreciation, partnership, and corporate balance sheet speed drills.</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-cyanAccent font-bold">▶</span>
+                                <div><strong class="text-white">Economics:</strong> Micro/Macro graphical modeling, price elasticity formulas, national income accounting, and statistics drills.</div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emeraldAccent font-bold">▶</span>
+                                <div><strong class="text-white">Business Studies:</strong> Strategic case study solving, management principles, keyword-focused answer structure for board examiners.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Career Pathways & Guidance Focus -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-indigoPrimary uppercase tracking-widest">Section 4 • Career Roadmaps</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Post-Commerce Career Track & Specialization Interest</h3>
+                <p class="text-slate-600 text-sm mt-2 max-w-4xl">
+                    Coaching extends beyond classroom exams. We actively prepare senior secondary students for premier professional certifications, central university entrance tests (CUET), and top-tier undergraduate business programs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="border border-indigo-100 bg-indigo-50/50 rounded-xl p-4">
+                        <h4 class="font-bold text-indigoDark text-sm">Professional Streams (CA / CS / CMA)</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Over 50% of enrolled students prepare for professional finance paths. Class XI & XII concepts are structured to align directly with CA Foundation and CS Executive syllabus prerequisites.
+                        </p>
+                    </div>
+                    <div class="border border-cyan-100 bg-cyan-50/50 rounded-xl p-4">
+                        <h4 class="font-bold text-indigoDark text-sm">University & Management Programs (CUET / BBA)</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Dedicated counseling for CUET university selection, B.Com (Hons), BBA, BMS, and integrated corporate law options.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="chart-container">
+                        <canvas id="careerPathChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Teaching Methodology & Process Flow (HTML/CSS Flow - NO SVG/Mermaid) -->
+        <section id="methodology" class="bg-gradient-to-br from-indigoDark to-slate-900 text-white rounded-2xl shadow-xl p-6 sm:p-8">
+            <div class="mb-8 text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold text-cyanAccent uppercase tracking-widest">Section 5 • Proven Learning Framework</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">The 4-Step Conceptual Mastery Cycle</h3>
+                <p class="text-slate-300 text-sm mt-2">
+                    How Commerce Tutorials By Anjali Srivastava transforms beginner commerce learners into confident board toppers.
+                </p>
+            </div>
+
+            <!-- Structured Flowchart using Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-indigo-950/80 border border-indigo-700/50 rounded-xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-cyanAccent text-slate-900 rounded-lg flex items-center justify-center font-black text-lg mb-4">01</div>
+                        <h4 class="font-bold text-white text-base mb-2">Concept Building</h4>
+                        <p class="text-xs text-slate-300">
+                            Explaining the "WHY" behind every journal entry, economic curve, and management theory using practical real-life business examples.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-cyan-300 font-mono text-xs">Step 1 • Foundation</div>
+                </div>
+
+                <div class="bg-indigo-950/80 border border-indigo-700/50 rounded-xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-amberAccent text-slate-900 rounded-lg flex items-center justify-center font-black text-lg mb-4">02</div>
+                        <h4 class="font-bold text-white text-base mb-2">Targeted Practice</h4>
+                        <p class="text-xs text-slate-300">
+                            Daily practice sheets (DPPs), numerical trick sheets, and step-by-step account balance sheet resolution.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-amber-300 font-mono text-xs">Step 2 • Application</div>
+                </div>
+
+                <div class="bg-indigo-950/80 border border-indigo-700/50 rounded-xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-emeraldAccent text-slate-900 rounded-lg flex items-center justify-center font-black text-lg mb-4">03</div>
+                        <h4 class="font-bold text-white text-base mb-2">Continuous Evaluation</h4>
+                        <p class="text-xs text-slate-300">
+                            Weekly chapter tests, monthly unit assessments, and board-pattern pre-board simulations with PYQ drills.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-emerald-300 font-mono text-xs">Step 3 • Assessment</div>
+                </div>
+
+                <div class="bg-indigo-950/80 border border-indigo-700/50 rounded-xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 bg-indigo-400 text-slate-900 rounded-lg flex items-center justify-center font-black text-lg mb-4">04</div>
+                        <h4 class="font-bold text-white text-base mb-2">1-on-1 Refinement</h4>
+                        <p class="text-xs text-slate-300">
+                            Personal doubt resolution, paper correction feedback, speed-writing drills, and parent progress updates.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-indigo-300 font-mono text-xs">Step 4 • Perfection</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Frequently Asked Questions (Accordion) -->
+        <section id="faqs" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="mb-8">
+                <span class="text-xs font-bold text-indigoPrimary uppercase tracking-widest">Section 6 • Quick Reference</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Top 10 Frequently Asked Questions (FAQs)</h3>
+                <p class="text-slate-600 text-sm mt-2">
+                    Everything parents and prospective students need to know about our batch structure, subject coverage, and teaching methodology in Indira Nagar, Lucknow.
+                </p>
+            </div>
+
+            <div class="space-y-4 max-w-4xl">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q1: What makes Commerce Tutorials By Anjali Srivastava unique in Indira Nagar?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        Unlike large coaching factories with 80–100 students per hall, we strictly limit our batches to 12–15 students. Led by Anjali Srivastava with over 8 years of teaching expertise, we focus on concept clarity ("Why" before "How"), 1-on-1 doubt resolution, personalized performance tracking, and a supportive AC classroom environment.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q2: Which classes and educational boards do you cover?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        We offer comprehensive coaching for Class IX, X, XI, and XII across CBSE, ICSE, and ISC boards. We also provide specialized academic assistance and university exam preparation for B.Com undergraduates.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q3: Which core commerce subjects are taught at the center?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        We specialize in core commerce subjects: Accountancy, Business Studies, Economics (Microeconomics, Macroeconomics, and Statistics), and General Commerce fundamentals.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q4: How do you support students who are weak in Accountancy or Economics?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        We rebuild fundamentals from the ground up. For Accountancy, we focus on accounting logic, journal entry rules, and balance sheet practice. For Economics, we simplify numerical and graphical models. Combined with individual doubt-solving and daily practice sheets, we turn weak areas into high-scoring strengths.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q5: What is your typical batch size and classroom setting?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        We maintain small batch sizes capped at 12–15 students to ensure direct faculty-student interaction. All classes are conducted offline in comfortable, air-conditioned classrooms at our Indira Nagar center.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 6 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q6: How often are tests and evaluations conducted?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        Evaluation is continuous. We conduct weekly chapter tests, monthly unit assessments, and full-length board pattern pre-board examinations with detailed paper correction and constructive feedback.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 7 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q7: Do parents receive regular updates regarding student progress?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        Yes! We believe parent-teacher collaboration is key to student success. We share weekly performance analysis reports and organize periodic parent interaction sessions to review academic progress and attendance.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 8 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q8: Do you assist with competitive exams like CUET and career guidance after Class 12?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        Absolutely. Beyond board exams, we provide dedicated CUET strategy guidance, career counselling for professional pathways like CA, CS, CMA, and BBA, and help students with university application planning.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 9 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q9: Are demo classes available for new students?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        Yes, prospective students can attend a complimentary demo class to experience our teaching methodology, batch environment, and personalized attention before enrolling.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 10 -->
+                <details class="group bg-slate-50 border border-slate-200 rounded-xl p-4 transition-all duration-200">
+                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer text-sm sm:text-base">
+                        <span>Q10: Where is the center located and how can parents/students contact you?</span>
+                        <span class="text-indigoPrimary font-bold group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-3 border-t border-slate-200 pt-3">
+                        We are located at <strong>C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016</strong> (easily accessible from Munshipulia, Gomti Nagar, and Faizabad Road). You can visit our website at <a href="https://www.bestcommerceprep.in/" target="_blank" class="text-indigoPrimary underline">www.bestcommerceprep.in</a> or reach us directly via Call or WhatsApp at <strong>+91 70224 19327</strong>.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Location & Direct Contact Hub -->
+        <section class="bg-gradient-to-r from-indigoDark via-indigo-900 to-slate-900 text-white rounded-2xl shadow-xl p-6 sm:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="text-xs font-bold text-cyanAccent uppercase tracking-widest">Connect & Enroll</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Join Lucknow's Most Trusted Commerce Academy</h3>
+                    <p class="text-xs sm:text-sm text-slate-300">
+                        Conveniently situated in Indira Nagar, our center serves students from Munshipulia, Gomti Nagar, Faizabad Road, and surrounding Lucknow localities.
+                    </p>
+
+                    <div class="space-y-3 pt-2 text-xs sm:text-sm">
+                        <div class="flex items-start gap-3">
+                            <span class="text-lg">📍</span>
+                            <div>
+                                <strong class="text-cyan-300">Center Address:</strong><br>
+                                C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">📞</span>
+                            <div>
+                                <strong class="text-cyan-300">Call / WhatsApp:</strong>
+                                <a href="tel:+91 70224 19327" class="hover:underline font-bold text-white ml-1">+91 70224 19327</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">🌐</span>
+                            <div>
+                                <strong class="text-cyan-300">Official Website:</strong>
+                                <a href="https://www.bestcommerceprep.in/" target="_blank" class="hover:underline text-cyanAccent font-bold ml-1">www.bestcommerceprep.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-indigo-950/90 border border-indigo-700/60 rounded-xl p-6 text-center space-y-4 shadow-inner">
+                    <div class="text-amberAccent text-3xl font-black">Admissions Open</div>
+                    <p class="text-xs text-slate-300">
+                        New batches starting for Class XI, XII Commerce Boards, B.Com, and CUET Preparation. Limited to 15 seats per batch!
+                    </p>
+                    <a href="https://www.bestcommerceprep.in/" target="_blank" class="inline-block w-full bg-gradient-to-r from-cyanAccent to-indigoPrimary hover:from-cyan-400 hover:to-indigo-600 text-slate-900 font-bold py-3 px-6 rounded-lg text-sm transition shadow-lg">
+                        Visit Official Website
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigoDark text-slate-400 text-xs py-8 border-t border-indigo-900 text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-semibold text-slate-300">Commerce Tutorials By Anjali Srivastava • Indira Nagar, Lucknow</p>
+            <p>© 2026 Commerce Tutorials. All rights reserved. | Contact: +91 70224 19327 | www.bestcommerceprep.in</p>
+        </div>
+    </footer>
+
+    <!-- Chart Initialization Script -->
+    <script>
+        // Shared Chart.js Options Template with mandatory Tooltip Callback Logic & Responsiveness
+        const commonTooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        // 1. Batch Comparison Chart (Horizontal Bar Chart)
+        const ctxBatch = document.getElementById('batchComparisonChart').getContext('2d');
+        new Chart(ctxBatch, {
+            type: 'bar',
+            data: {
+                labels: [
+                    ['Commercial Coaching', 'Factories (80-100)'],
+                    ['Commerce Tutorials', 'By Anjali (12-15)']
+                ],
+                datasets: [{
+                    label: 'Max Students Per Batch',
+                    data: [90, 15],
+                    backgroundColor: ['#94a3b8', '#4f46e5'],
+                    borderColor: ['#64748b', '#3730a3'],
+                    borderWidth: 1.5,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Max Batch Capacity Benchmark (Lower is Better for Personal Care)',
+                        color: '#1e293b',
+                        font: { size: 13, weight: 'bold' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: commonTooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Number of Students', color: '#475569', font: { size: 11 } }
+                    }
+                }
+            }
+        });
+
+        // 2. Enrollment Donut Chart
+        const ctxEnrollment = document.getElementById('enrollmentDonutChart').getContext('2d');
+        new Chart(ctxEnrollment, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    ['Class XII Board', 'Intensive Prep'],
+                    ['Class XI Commerce', 'Foundation Level'],
+                    ['Class IX & X', 'Early Commerce'],
+                    ['B.Com & CUET', 'Degree Assistance']
+                ],
+                datasets: [{
+                    data: [40, 35, 15, 10],
+                    backgroundColor: ['#4f46e5', '#06b6d4', '#f59e0b', '#10b981'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 11 },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                return data.labels.map((label, i) => ({
+                                    text: Array.isArray(label) ? label.join(' ') : label,
+                                    fillStyle: data.datasets[0].backgroundColor[i],
+                                    hidden: false,
+                                    index: i
+                                }));
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Student Enrollment Distribution by Academic Level',
+                        color: '#1e293b',
+                        font: { size: 13, weight: 'bold' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: commonTooltipTitleCallback,
+                            label: function(context) {
+                                return ` ${context.parsed}% of Enrolled Body`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 3. Subject Score Elevation (Grouped Bar Chart)
+        const ctxScore = document.getElementById('scoreElevationChart').getContext('2d');
+        new Chart(ctxScore, {
+            type: 'bar',
+            data: {
+                labels: [
+                    ['Accountancy', 'Numerical Practice'],
+                    ['Economics &', 'Statistics Models'],
+                    ['Business Studies', 'Case Studies']
+                ],
+                datasets: [
+                    {
+                        label: 'Average Pre-Coaching Score (%)',
+                        data: [62, 65, 70],
+                        backgroundColor: '#cbd5e1',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Average Post-Coaching Score (%)',
+                        data: [94, 91, 95],
+                        backgroundColor: '#10b981',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+                    title: {
+                        display: true,
+                        text: 'Average Student Marks Percentage Boost Post-Coaching',
+                        color: '#1e293b',
+                        font: { size: 13, weight: 'bold' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: commonTooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Percentage Marks (%)', color: '#475569', font: { size: 11 } }
+                    }
+                }
+            }
+        });
+
+        // 4. Career Path Chart (Doughnut)
+        const ctxCareer = document.getElementById('careerPathChart').getContext('2d');
+        new Chart(ctxCareer, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    ['Chartered', 'Accountancy (CA)'],
+                    ['Company', 'Secretary (CS)'],
+                    ['Cost & Management', 'Accounting (CMA)'],
+                    ['CUET & B.Com', 'University Track'],
+                    ['BBA & Corporate', 'Management (MBA)']
+                ],
+                datasets: [{
+                    data: [35, 20, 10, 20, 15],
+                    backgroundColor: ['#4f46e5', '#06b6d4', '#f59e0b', '#10b981', '#6366f1'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 11 },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                return data.labels.map((label, i) => ({
+                                    text: Array.isArray(label) ? label.join(' ') : label,
+                                    fillStyle: data.datasets[0].backgroundColor[i],
+                                    hidden: false,
+                                    index: i
+                                }));
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Post-Class XII Commerce Specialization Pathways',
+                        color: '#1e293b',
+                        font: { size: 13, weight: 'bold' }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: commonTooltipTitleCallback,
+                            label: function(context) {
+                                return ` ${context.parsed}% Aspirant Interest`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

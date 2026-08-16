@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#FDF8EF] text-brand-dark antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .neo-box {
+    @apply border-2 border-brand-dark bg-white rounded-[16px] shadow-neo transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#0A0F1D];
+  }
+  
+  .neo-box-brand {
+    @apply border-2 border-brand-dark bg-white rounded-[16px] shadow-neoBrand transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#0E9A8B];
+  }
+
+  .neo-btn {
+    @apply border-2 border-brand-dark rounded-full font-bold transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0;
+  }
+
+  .neo-btn-primary {
+    @apply neo-btn bg-brand-dark text-white shadow-neoBrand hover:bg-brand-primary hover:shadow-neo;
+  }
+
+  .neo-btn-secondary {
+    @apply neo-btn bg-white text-brand-dark shadow-neo hover:bg-brand-cream;
+  }
+
+  .neo-btn-whatsapp {
+    @apply neo-btn bg-[#25D366] text-white border-2 border-brand-dark shadow-neo hover:opacity-90;
+  }
+}
+
+/* Custom hand drawn style underline helper */
+.hand-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hand-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.15em;
+  background-color: #0E9A8B;
+  opacity: 0.4;
+  border-radius: 4px;
+  z-index: -1;
+  transform: rotate(-1deg);
+}

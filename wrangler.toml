@@ -1,9 +1,18 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
 name = "best-commerce-classes"
-compatibility_date = "2024-09-23"
-pages_build_output_dir = "dist"
+compatibility_date = "2026-08-16"
+workers_dev = true
+
+[[routes]]
+pattern = "bestcommerceprep.in"
+custom_domain = true
+
+[[routes]]
+pattern = "www.bestcommerceprep.in"
+custom_domain = true
+
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "single-page-application"

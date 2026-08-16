@@ -13,34 +13,37 @@ export default function EnquiryModal({ isOpen, onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const msg = "Hi Anjali Ma'am, I want to book a free demo slot for commerce classes.\n\n*Student Name:* " + formData.name + "\n*Phone:* " + formData.phone + "\n*Class:* " + formData.targetClass + "\n*Board:* " + formData.board;
-    
-    // Correct phone number: 9838827833
     window.open("https://wa.me/919838827833?text=" + encodeURIComponent(msg), '_blank');
     onClose();
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-brand-dark/70 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="bg-brand-cream border-2 border-brand-dark rounded-[24px] p-6 max-w-[440px] w-full shadow-neoLarge relative">
+    <div className="fixed inset-0 z-50 bg-brand-navy/60 backdrop-blur-sm flex items-center justify-center p-4">
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-[460px] w-full shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 h-8 w-8 rounded-full border-2 border-brand-dark bg-white font-bold text-[14px] grid place-items-center hover:bg-brand-dark hover:text-white transition-colors duration-150"
+          className="absolute top-5 right-5 h-8 w-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-sm flex items-center justify-center transition"
+          aria-label="Close modal"
         >
           ✕
         </button>
 
-        <h3 className="text-[24px] font-bold font-serif-display text-brand-dark">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blueSky text-brand-blue text-[11px] font-bold tracking-wider uppercase mb-2">
+          <span>🎯</span> Free 2-Day Trial Demo
+        </div>
+
+        <h3 className="text-2xl sm:text-3xl font-bold font-serif text-ink-dark">
           Book Your Free Demo Class
         </h3>
-        <p className="text-[12.5px] text-slate-500 font-semibold mt-1">
-          Enter your details to reserve your trial slot with Anjali Srivastava in Indira Nagar.
+        <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1 leading-relaxed">
+          Reserve your trial slot with Anjali Srivastava at C-717, Indira Nagar, Lucknow.
         </p>
         
-        <form onSubmit={handleSubmit} className="mt-5 space-y-3.5">
+        <form onSubmit={handleSubmit} className="mt-5 space-y-4">
           <div>
-            <label className="text-[11.5px] font-extrabold uppercase tracking-wider text-brand-dark block mb-1">
-              Student Name
+            <label className="text-xs font-bold uppercase tracking-wider text-ink-dark block mb-1">
+              Student Full Name
             </label>
             <input 
               type="text" 
@@ -48,12 +51,12 @@ export default function EnquiryModal({ isOpen, onClose }) {
               placeholder="e.g. Rahul Sharma"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full h-11 px-3.5 rounded-[12px] border-2 border-black/25 bg-white text-[13.5px] font-medium text-brand-dark focus:border-brand-primary focus:outline-none" 
+              className="w-full h-11 px-3.5 rounded-xl border border-slate-300 bg-white text-sm font-medium text-ink-dark focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none" 
             />
           </div>
           
           <div>
-            <label className="text-[11.5px] font-extrabold uppercase tracking-wider text-brand-dark block mb-1">
+            <label className="text-xs font-bold uppercase tracking-wider text-ink-dark block mb-1">
               WhatsApp Mobile Number
             </label>
             <input 
@@ -62,19 +65,19 @@ export default function EnquiryModal({ isOpen, onClose }) {
               placeholder="e.g. 9838827833"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full h-11 px-3.5 rounded-[12px] border-2 border-black/25 bg-white text-[13.5px] font-medium text-brand-dark focus:border-brand-primary focus:outline-none" 
+              className="w-full h-11 px-3.5 rounded-xl border border-slate-300 bg-white text-sm font-medium text-ink-dark focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none" 
             />
           </div>
           
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-[11.5px] font-extrabold uppercase tracking-wider text-brand-dark block mb-1">
+              <label className="text-xs font-bold uppercase tracking-wider text-ink-dark block mb-1">
                 Select Class
               </label>
               <select 
                 value={formData.targetClass}
                 onChange={(e) => setFormData({ ...formData, targetClass: e.target.value })}
-                className="w-full h-11 px-3 rounded-[12px] border-2 border-black/25 bg-white text-[13px] font-bold text-brand-dark focus:outline-none"
+                className="w-full h-11 px-3 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-ink-dark outline-none"
               >
                 <option value="Class IX">Class IX</option>
                 <option value="Class X">Class X</option>
@@ -86,13 +89,13 @@ export default function EnquiryModal({ isOpen, onClose }) {
             </div>
             
             <div>
-              <label className="text-[11.5px] font-extrabold uppercase tracking-wider text-brand-dark block mb-1">
+              <label className="text-xs font-bold uppercase tracking-wider text-ink-dark block mb-1">
                 Board / Univ
               </label>
               <select 
                 value={formData.board}
                 onChange={(e) => setFormData({ ...formData, board: e.target.value })}
-                className="w-full h-11 px-3 rounded-[12px] border-2 border-black/25 bg-white text-[13px] font-bold text-brand-dark focus:outline-none"
+                className="w-full h-11 px-3 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-ink-dark outline-none"
               >
                 <option value="CBSE Board">CBSE</option>
                 <option value="ISC Board">ISC</option>
@@ -104,14 +107,14 @@ export default function EnquiryModal({ isOpen, onClose }) {
           
           <button 
             type="submit" 
-            className="mt-2 w-full h-12 rounded-[14px] bg-[#25D366] text-white text-[14px] font-extrabold hover:opacity-90 transition duration-150 grid place-items-center shadow-neo border border-black/20"
+            className="w-full h-12 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-md transition"
           >
-            💬 Submit Enquiry on WhatsApp
+            <span>💬</span> Submit Enquiry on WhatsApp
           </button>
           
-          <div className="text-[11.5px] text-center text-slate-500 font-bold pt-1">
-            Center: C-717, Indira Nagar, Lucknow •{' '}
-            <a href="tel:+919838827833" className="underline text-brand-dark">
+          <div className="text-xs text-center text-slate-500 font-medium pt-1">
+            Indira Nagar Center: C-717 •{' '}
+            <a href="tel:+919838827833" className="text-brand-blue font-bold hover:underline">
               Call: +91 98388 27833
             </a>
           </div>

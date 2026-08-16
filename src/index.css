@@ -1,71 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: #14213d;
+  --ink-dark: #0a1128;
+  --blue: #0756d8;
+  --blue-dark: #0544ab;
+  --sky: #dff2ff;
+  --cream: #fffaf1;
+  --orange: #ff8a1f;
+  --mint: #087851;
+  --line: #dce3ee;
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
   }
   
   body {
-    @apply bg-[#FDF8EF] text-brand-dark antialiased;
+    color: var(--ink);
+    background-color: #ffffff;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--ink-dark);
   }
 
   .font-serif-display {
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, 'Playfair Display', serif;
   }
 }
 
-@layer utilities {
-  .neo-box {
-    @apply border-2 border-brand-dark bg-white rounded-[16px] shadow-neo transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#0A0F1D];
-  }
-  
-  .neo-box-brand {
-    @apply border-2 border-brand-dark bg-white rounded-[16px] shadow-neoBrand transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#0E9A8B];
-  }
-
-  .neo-btn {
-    @apply border-2 border-brand-dark rounded-full font-bold transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0;
-  }
-
-  .neo-btn-primary {
-    @apply neo-btn bg-brand-dark text-white shadow-neoBrand hover:bg-brand-primary hover:shadow-neo;
-  }
-
-  .neo-btn-secondary {
-    @apply neo-btn bg-white text-brand-dark shadow-neo hover:bg-brand-cream;
-  }
-
-  .neo-btn-whatsapp {
-    @apply neo-btn bg-[#25D366] text-white border-2 border-brand-dark shadow-neo hover:opacity-90;
-  }
+/* Notebook Visual Element Styling */
+.notebook-sheet {
+  background: #fffdfa linear-gradient(#d8e7f7 1px, transparent 1px) 0 0 / 100% 32px;
+  border-left: 10px solid #ff8a1f;
+  border-radius: 8px 24px 18px 8px;
+  position: relative;
+  box-shadow: 18px 22px 0px 0px #0756d8, 0 30px 60px rgba(18, 58, 121, 0.22);
 }
 
-/* Custom hand drawn style underline helper */
-.hand-underline {
+.notebook-sheet::before {
+  content: "";
+  background: repeating-linear-gradient(#14213d 0 4px, transparent 4px 28px);
+  width: 22px;
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: -20px;
+}
+
+.tape-strip {
+  background: rgba(255, 207, 98, 0.75);
+  backdrop-filter: blur(2px);
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  left: 35%;
+  transform: rotate(-4deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Animated Floating Orbs */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(12px) rotate(-4deg); }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-8px) scale(1.05); }
+}
+
+.animate-orb1 {
+  animation: floatOrb1 5s ease-in-out infinite;
+}
+
+.animate-orb2 {
+  animation: floatOrb2 6.5s ease-in-out infinite;
+}
+
+.animate-orb3 {
+  animation: floatOrb3 4.5s ease-in-out infinite;
+}
+
+/* Subtle Hand Drawn / Underline Effect */
+.confidence-italic {
+  font-family: Georgia, 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--blue);
   position: relative;
   display: inline-block;
 }
 
-.hand-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.1em;
-  width: 100%;
-  height: 0.15em;
-  background-color: #0E9A8B;
-  opacity: 0.4;
-  border-radius: 4px;
-  z-index: -1;
-  transform: rotate(-1deg);
+/* Glass & Card helpers */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 227, 238, 0.8);
 }
+
+.glow-aura {
+  background: radial-gradient(circle, rgba(255, 207, 98, 0.45) 0%, rgba(223, 242, 255, 0) 70%);
+  filter: blur(60px);
+}
+

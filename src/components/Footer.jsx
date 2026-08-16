@@ -1,97 +1,102 @@
 import React from 'react';
 
-const seoTags = [
-  "Best Commerce Coaching Institute in Indira Nagar, Lucknow",
-  "Commerce Coaching in Indira Nagar",
-  "Class 11 Commerce Coaching Lucknow",
-  "Class 12 Commerce Coaching Indira Nagar",
-  "Accounts Coaching Lucknow",
-  "Business Studies Coaching",
-  "Economics Coaching Indira Nagar",
-  "CBSE Commerce Coaching Lucknow",
-  "ISC Commerce Coaching",
-  "B.Com Coaching Indira Nagar",
-  "CUET Commerce Coaching Lucknow",
-  "Top Commerce Teacher in Lucknow"
+const footerLinks = [
+  { label: 'Class IX–X Foundation', href: '#classes' },
+  { label: 'Class XI Commerce', href: '#classes' },
+  { label: 'Class XII Boards', href: '#classes' },
+  { label: 'B.Com Higher Ed', href: '#classes' },
+  { label: 'CUET UG Prep', href: '#classes' },
+  { label: 'Accountancy Mastery', href: '#subjects' },
+  { label: 'Economics Curves', href: '#subjects' },
+  { label: 'Business Studies', href: '#subjects' },
+  { label: '7-Step Method', href: '#method' },
+  { label: 'Board Toppers', href: '#toppers' },
+  { label: 'Google Form Admission', href: '#admission-form' },
+  { label: 'Interactive Analytics (New)', href: '/Infographics/commerce_tutorials_infographic_spa.html', isExternal: true },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-cream border-t-2 border-brand-dark/10 py-12 px-6 md:px-8 mt-12">
-      <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-10 items-start justify-between">
+    <footer className="bg-slate-50 border-t border-slate-200 py-12 px-4 md:px-8">
+      <div className="mx-auto max-w-[1280px]">
         
-        {/* Brand details */}
-        <div className="max-w-[380px] space-y-4">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/logo1.2.png" 
-              className="h-10 w-10 rounded-full border-2 border-brand-dark object-cover" 
-              alt="logo" 
-            />
-            <div className="leading-[1.1]">
-              <div className="font-display font-extrabold text-[15px] text-brand-dark">
-                Commerce Tutorials
+        <div className="flex flex-col lg:flex-row gap-10 items-start justify-between pb-10 border-b border-slate-200">
+          {/* Brand Column */}
+          <div className="max-w-md">
+            <a href="#top" className="flex items-center gap-3 group">
+              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-blue to-cyan-500 text-white font-serif font-bold text-lg flex items-center justify-center shadow-sm">
+                CT
               </div>
-              <div className="text-[10px] tracking-[0.15em] uppercase text-brand-primary font-bold">
-                By Anjali Srivastava
+              <div>
+                <div className="font-serif font-bold text-lg text-ink-dark">
+                  Commerce Tutorials
+                </div>
+                <div className="text-[10.5px] uppercase tracking-[0.14em] text-brand-blue font-bold">
+                  By Anjali Srivastava
+                </div>
               </div>
+            </a>
+
+            <p className="mt-4 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              Where Concepts Become Confidence. Lucknow's trusted coaching institute for senior secondary commerce boards (CBSE, ISC, ICSE, UP Board) and college-level support (B.Com & CUET).
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 text-xs font-bold text-slate-600">
+              <a href="tel:+919838827833" className="text-brand-blue hover:underline">
+                📞 +91 98388 27833
+              </a>
+              <span className="text-slate-300">•</span>
+              <a 
+                href="https://maps.app.goo.gl/bbXyRwKK7zrQQtcz8" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-blue hover:underline"
+              >
+                📍 Google Maps Directions
+              </a>
+              <span className="text-slate-300">•</span>
+              <a 
+                href="https://share.google/Kqt2nXAXtfpPjTb58" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-blue hover:underline"
+              >
+                ⭐ Google Profile
+              </a>
             </div>
           </div>
-          <p className="text-[12.5px] leading-[1.6] text-slate-600 font-semibold">
-            Lucknow's trusted coaching institute for senior secondary commerce boards (CBSE, ISC, ICSE, UP Board) and college-level support (B.Com & CUET). Concept-first learning with personal mentorship since 2018.
-          </p>
-          
-          <div className="flex flex-wrap items-center gap-2 text-[12px] font-bold text-slate-700">
-            <a href="tel:+919838827833" className="text-brand-primary hover:underline">
-              📞 +91 98388 27833
-            </a>
-            <span className="text-slate-300">•</span>
-            <a 
-              href="https://maps.app.goo.gl/bbXyRwKK7zrQQtcz8" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-brand-primary hover:underline"
-            >
-              📍 Google Maps
-            </a>
-            <span className="text-slate-300">•</span>
-            <a 
-              href="https://www.pinterest.com/bestcommerceclass/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-[#E60023] hover:underline"
-            >
-              📌 Pinterest
-            </a>
+
+          {/* Quick Subpages Links */}
+          <div className="flex-1 lg:max-w-xl">
+            <div className="text-[11px] font-extrabold uppercase tracking-widest text-slate-400 mb-3">
+              Explore Academic Programs & Resources
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-semibold text-slate-600">
+              {footerLinks.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.href}
+                  target={link.isExternal ? '_blank' : undefined}
+                  rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                  className="hover:text-brand-blue py-1 transition-colors"
+                >
+                  • {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* SEO Tag Cloud */}
-        <div className="flex-1 lg:max-w-[640px]">
-          <div className="text-[11.5px] font-extrabold tracking-widest uppercase text-slate-400">
-            SEO • Popular Lucknow Searches
+        {/* Bottom Copyright */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <div>
+            © 2025–2026 Commerce Tutorials By Anjali Srivastava • C-717, Indira Nagar, Lucknow – 226016
           </div>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {seoTags.map((tag) => (
-              <span 
-                key={tag} 
-                className="px-3 py-1 rounded-full border border-brand-dark/15 bg-white text-[11px] font-bold text-slate-700 shadow-2xs hover:border-brand-dark transition-colors duration-150 cursor-default"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="font-serif italic text-slate-400">
+            Concepts · Practice · Confidence
           </div>
         </div>
-      </div>
 
-      {/* Copy block */}
-      <div className="mx-auto max-w-[1280px] mt-8 pt-6 border-t-2 border-brand-dark/10 flex flex-col md:flex-row justify-between gap-2 text-[12px] text-slate-500 font-semibold">
-        <span>
-          © 2025-2026 Commerce Tutorials By Anjali Srivastava • Indira Nagar, Lucknow • hellocommerceclass@gmail.com • +91 98388 27833
-        </span>
-        <span>
-          Where Concepts Become Confidence • All rights reserved.
-        </span>
       </div>
     </footer>
   );

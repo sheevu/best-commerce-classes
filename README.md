@@ -38,8 +38,34 @@ Build for production:
 npm run build
 ```
 
+## Cloudflare deployment
+
+This repo is deployed on Cloudflare Workers with Static Assets.
+
+### Live Production Endpoints:
+- **Primary Website:** [https://www.bestcommerceprep.in/](https://www.bestcommerceprep.in/)
+- **Apex Domain:** [https://bestcommerceprep.in/](https://bestcommerceprep.in/)
+- **Infographics Interactive Page:** [https://www.bestcommerceprep.in/Infographics/commerce_tutorials_infographic_spa.html](https://www.bestcommerceprep.in/Infographics/commerce_tutorials_infographic_spa.html)
+- **Workers Dev URL:** [https://best-commerce-classes.hellocommerceclass.workers.dev](https://best-commerce-classes.hellocommerceclass.workers.dev)
+
+Required GitHub secrets for CI:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Manual deploy command:
+
+```bash
+npm run deploy:cloudflare
+```
+
+Deployment notes:
+
+- `wrangler.toml` manages both `bestcommerceprep.in` and `www.bestcommerceprep.in` custom domains.
+- The app is configured as a SPA via `assets.not_found_handling = "single-page-application"`.
+- Static assets (logos, robots.txt, sitemap.xml, infographics) are placed in `public/` and built into `dist/`.
+
 ## SEO notes
 
-- Keep the institute name, address, phone, and WhatsApp number identical across the site and business profiles.
-- If the live domain changes, update the canonical URL, `og:url`, JSON-LD `url`, and sitemap together.
-- Use real classroom, exterior, and student success photos when available to strengthen local trust.
+- Institute name, address, phone (`+91 98388 27833`), and WhatsApp number are consistent across all components and JSON-LD schema.
+- Canonical URL is set to `https://www.bestcommerceprep.in/`.

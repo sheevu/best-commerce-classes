@@ -8,8 +8,8 @@ Static marketing site for the institute behind **Commerce Tutorials By Anjali Sr
 - **Tagline:** Where Concepts Become Confidence.
 - **Location:** C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016
 - **Google Maps Location:** [Get Directions on Google Maps](https://maps.app.goo.gl/bbXyRwKK7zrQQtcz8)
-- **Phone / Call:** [+91 70224 19327](tel:+91 70224 19327) (91-7022419327)
-- **WhatsApp:** [Chat on WhatsApp (+91 70224 19327)](https://wa.me/917022419327)
+- **Phone / Call:** [+91 98388 27833](tel:+91 98388 27833) (91-9838827833)
+- **WhatsApp:** [Chat on WhatsApp (+91 98388 27833)](https://wa.me/919838827833)
 - **Email:** [hellocommerceclass@gmail.com](mailto:hellocommerceclass@gmail.com)
 - **Pinterest:** [Pinterest Profile & Study Pins](https://pin.it/56c56anvX)
 - **Timings:** Monday – Saturday (4:00 PM – 8:00 PM)

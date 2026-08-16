@@ -39,7 +39,7 @@ const faqsList = [
   },
   {
     q: "Where is the center located and how can we contact you?",
-    a: "We are located at C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016 (easily accessible from Munshipulia, Gomti Nagar, and Faizabad Road). You can reach us directly via Call or WhatsApp at +91 70224 19327."
+    a: "We are located at C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016 (easily accessible from Munshipulia, Gomti Nagar, and Faizabad Road). You can reach us directly via Call or WhatsApp at +91 98388 27833."
   }
 ];
 

@@ -74,14 +74,14 @@ export default function App() {
       {/* 12. Floating Quick Contact Widgets (WhatsApp & Call) */}
       <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2">
         <a 
-          href="tel:+917022419327" 
+          href="tel:+919838827833" 
           className="h-12 w-12 rounded-full bg-brand-dark text-white border-2 border-brand-dark shadow-neoBrand grid place-items-center text-[18px] hover:scale-110 active:scale-100 transition" 
-          title="Call +91 70224 19327"
+          title="Call +91 98388 27833"
         >
           📞
         </a>
         <a 
-          href="https://wa.me/917022419327?text=Hi%20Anjali%20Ma'am,%20I%20want%20to%20enquire%20about%20Commerce%20Batches" 
+          href="https://wa.me/919838827833?text=Hi%20Anjali%20Ma'am,%20I%20want%20to%20enquire%20about%20Commerce%20Batches" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="h-12 px-5 rounded-full bg-[#25D366] text-white font-extrabold border-2 border-brand-dark shadow-neo inline-flex items-center gap-2 text-[14px] hover:scale-105 active:scale-100 transition" 

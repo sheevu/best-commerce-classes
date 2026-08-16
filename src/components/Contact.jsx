@@ -12,8 +12,8 @@ export default function Contact() {
     e.preventDefault();
     const msg = "Hi Anjali Ma'am, I am interested in Commerce Coaching at Indira Nagar.\n\n*Student Name:* " + formData.name + "\n*Phone:* " + formData.phone + "\n*Class:* " + formData.targetClass + "\n*Board:* " + formData.board;
     
-    // Correct phone number: 7022419327
-    window.open("https://wa.me/917022419327?text=" + encodeURIComponent(msg), '_blank');
+    // Correct target phone: 919838827833
+    window.open("https://wa.me/919838827833?text=" + encodeURIComponent(msg), '_blank');
   };
 
   return (
@@ -61,8 +61,8 @@ export default function Contact() {
                   📞 Call & WhatsApp
                 </div>
                 <div className="mt-1.5 font-bold text-white leading-[1.5]">
-                  <a href="tel:+917022419327" className="hover:text-brand-lightGreen block text-[15px]">
-                    +91 70224 19327
+                  <a href="tel:+919838827833" className="hover:text-brand-lightGreen block text-[15px]">
+                    +91 98388 27833
                   </a>
                   <div className="text-[12px] text-slate-300 font-normal mt-1">
                     ⏰ Mon - Sat: 4:00 PM - 8:00 PM
@@ -92,15 +92,35 @@ export default function Contact() {
                   📌 Pinterest & Study Notes
                 </div>
                 <a 
-                  href="https://pin.it/56c56anvX" 
+                  href="https://www.pinterest.com/bestcommerceclass/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="mt-1.5 font-bold text-[#FDA4AF] block hover:underline"
+                  className="mt-1.5 font-bold text-[#FDA4AF] block hover:underline break-all"
                 >
-                  pinterest.com/pin/56c56anvX
+                  pinterest.com/bestcommerceclass/
                 </a>
                 <div className="text-[11.5px] text-slate-300 mt-1">
                   Commerce infographics, formula sheets & tips
+                </div>
+              </div>
+
+              {/* Netlify Site Link */}
+              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 sm:col-span-2">
+                <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
+                  🌐 Online Course Portal
+                </div>
+                <div className="mt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <a 
+                    href="https://commerce-coaching-lucknow.netlify.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="font-bold text-white hover:text-brand-lightGreen underline break-all"
+                  >
+                    https://commerce-coaching-lucknow.netlify.app/
+                  </a>
+                  <span className="text-[11px] text-slate-300">
+                    Additional syllabus files & performance archives
+                  </span>
                 </div>
               </div>
             </div>
@@ -108,13 +128,13 @@ export default function Contact() {
             {/* Quick Action Buttons strip */}
             <div className="mt-6 flex flex-wrap gap-3">
               <a 
-                href="tel:+917022419327" 
+                href="tel:+919838827833" 
                 className="h-11 px-6 rounded-full bg-brand-lightGreen text-green-950 text-[13px] font-extrabold inline-flex items-center gap-2 hover:bg-white hover:text-brand-dark transition shadow-xs"
               >
-                📞 Call: +91 70224 19327
+                📞 Call: +91 98388 27833
               </a>
               <a 
-                href="https://wa.me/917022419327?text=Hi%20Anjali%20Ma'am,%20I%20want%20to%20enquire%20about%20Commerce%20Batches" 
+                href="https://wa.me/919838827833?text=Hi%20Anjali%20Ma'am,%20I%20want%20to%20enquire%20about%20Commerce%20Batches" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="h-11 px-6 rounded-full bg-[#25D366] text-white text-[13px] font-extrabold inline-flex items-center gap-2 hover:opacity-90 transition border border-black/10 shadow-xs"
@@ -195,7 +215,7 @@ export default function Contact() {
                 Submit Enquiry via WhatsApp →
               </button>
               <p className="text-[11px] text-center text-slate-500 font-bold mt-1.5">
-                Direct faculty support: +91 70224 19327 • Indira Nagar, Lucknow
+                Direct support: +91 98388 27833 • Indira Nagar, Lucknow
               </p>
             </form>
           </div>

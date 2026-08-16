@@ -50,7 +50,7 @@ export default function WhyUs() {
             {pillarsData.map((pillar, idx) => (
               <div 
                 key={pillar.k} 
-                className="rounded-[18px] border-2 border-brand-dark bg-brand-cream p-4 hover:bg-white transition-all duration-150 hover:shadow-neo hover:-translate-y-0.5"
+                className="rounded-[18px] border-2 border-brand-dark bg-brand-cream p-4 hover:bg-white transition-all duration-300 ease-out hover:scale-[1.025] hover:-translate-y-2 hover:shadow-neoBrand hover:border-brand-primary"
               >
                 <div className="flex items-start justify-between">
                   <div className="h-7 w-7 rounded-full bg-brand-dark text-white grid place-items-center text-[11px] font-extrabold">

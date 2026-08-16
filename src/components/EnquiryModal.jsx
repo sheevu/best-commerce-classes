@@ -14,8 +14,8 @@ export default function EnquiryModal({ isOpen, onClose }) {
     e.preventDefault();
     const msg = "Hi Anjali Ma'am, I want to book a free demo slot for commerce classes.\n\n*Student Name:* " + formData.name + "\n*Phone:* " + formData.phone + "\n*Class:* " + formData.targetClass + "\n*Board:* " + formData.board;
     
-    // Correct phone number: 7022419327
-    window.open("https://wa.me/917022419327?text=" + encodeURIComponent(msg), '_blank');
+    // Correct phone number: 9838827833
+    window.open("https://wa.me/919838827833?text=" + encodeURIComponent(msg), '_blank');
     onClose();
   };
 
@@ -59,7 +59,7 @@ export default function EnquiryModal({ isOpen, onClose }) {
             <input 
               type="tel" 
               required 
-              placeholder="e.g. 7022419327"
+              placeholder="e.g. 9838827833"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="w-full h-11 px-3.5 rounded-[12px] border-2 border-black/25 bg-white text-[13.5px] font-medium text-brand-dark focus:border-brand-primary focus:outline-none" 
@@ -111,8 +111,8 @@ export default function EnquiryModal({ isOpen, onClose }) {
           
           <div className="text-[11.5px] text-center text-slate-500 font-bold pt-1">
             Center: C-717, Indira Nagar, Lucknow •{' '}
-            <a href="tel:+917022419327" className="underline text-brand-dark">
-              Call: +91 70224 19327
+            <a href="tel:+919838827833" className="underline text-brand-dark">
+              Call: +91 98388 27833
             </a>
           </div>
         </form>

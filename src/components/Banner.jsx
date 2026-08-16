@@ -9,10 +9,10 @@ export default function Banner({ onBookDemo }) {
       </span>
       <div className="inline-flex items-center gap-2 ml-2">
         <a 
-          href="tel:+917022419327" 
+          href="tel:+919838827833" 
           className="underline text-brand-lightGreen hover:text-white font-bold transition"
         >
-          📞 +91 70224 19327
+          📞 +91 98388 27833
         </a>
         <span className="text-white/40">•</span>
         <button 

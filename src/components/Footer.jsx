@@ -42,8 +42,8 @@ export default function Footer() {
           </p>
           
           <div className="flex flex-wrap items-center gap-2 text-[12px] font-bold text-slate-700">
-            <a href="tel:+917022419327" className="text-brand-primary hover:underline">
-              📞 +91 70224 19327
+            <a href="tel:+919838827833" className="text-brand-primary hover:underline">
+              📞 +91 98388 27833
             </a>
             <span className="text-slate-300">•</span>
             <a 
@@ -56,7 +56,7 @@ export default function Footer() {
             </a>
             <span className="text-slate-300">•</span>
             <a 
-              href="https://pin.it/56c56anvX" 
+              href="https://www.pinterest.com/bestcommerceclass/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-[#E60023] hover:underline"
@@ -87,7 +87,7 @@ export default function Footer() {
       {/* Copy block */}
       <div className="mx-auto max-w-[1280px] mt-8 pt-6 border-t-2 border-brand-dark/10 flex flex-col md:flex-row justify-between gap-2 text-[12px] text-slate-500 font-semibold">
         <span>
-          © 2025-2026 Commerce Tutorials By Anjali Srivastava • Indira Nagar, Lucknow • hellocommerceclass@gmail.com • +91 70224 19327
+          © 2025-2026 Commerce Tutorials By Anjali Srivastava • Indira Nagar, Lucknow • hellocommerceclass@gmail.com • +91 98388 27833
         </span>
         <span>
           Where Concepts Become Confidence • All rights reserved.

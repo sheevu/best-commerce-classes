@@ -88,7 +88,7 @@ export default function Batches({ onBookDemo }) {
                 Enroll / Book Demo
               </button>
               <a 
-                href={`https://wa.me/917022419327?text=Hi%20Anjali%20Ma'am,%20I%20want%20details%20for%20${encodeURIComponent(currentBatch.title)}`} 
+                href={`https://wa.me/919838827833?text=Hi%20Anjali%20Ma'am,%20I%20want%20details%20for%20${encodeURIComponent(currentBatch.title)}`} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="h-10 px-4 rounded-full bg-[#25D366] text-white text-[13px] font-extrabold inline-flex items-center gap-1.5 hover:opacity-90 transition border border-black/20 shadow-xs"

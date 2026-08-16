@@ -35,92 +35,117 @@ export default function Contact() {
               Lucknow's trusted offline commerce coaching at Indira Nagar. AC classrooms, small batches, concept-first teaching, parent updates, and proven board results. Personal mentorship by Anjali Srivastava.
             </p>
             
-            {/* Contact Details Grid */}
+            {/* Contact Details Grid with Action Buttons */}
             <div className="mt-6 grid sm:grid-cols-2 gap-3.5 text-[13px]">
-              {/* Address */}
-              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150">
-                <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
-                  📍 Institute Address
-                </div>
-                <div className="mt-1.5 font-semibold text-white leading-[1.45]">
-                  C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016
-                </div>
-                <a 
-                  href="https://maps.app.goo.gl/bbXyRwKK7zrQQtcz8" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-block mt-2 text-[12px] font-bold text-brand-lightGreen underline hover:text-white"
-                >
-                  Open in Google Maps →
-                </a>
-              </div>
-              
-              {/* Call & Timings */}
-              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150">
-                <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
-                  📞 Call & WhatsApp
-                </div>
-                <div className="mt-1.5 font-bold text-white leading-[1.5]">
-                  <a href="tel:+919838827833" className="hover:text-brand-lightGreen block text-[15px]">
-                    +91 98388 27833
-                  </a>
-                  <div className="text-[12px] text-slate-300 font-normal mt-1">
-                    ⏰ Mon - Sat: 4:00 PM - 8:00 PM
+              {/* Address Card */}
+              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
+                    📍 Institute Address
+                  </div>
+                  <div className="mt-1.5 font-semibold text-white leading-[1.45]">
+                    C-717, Near Church Road, Behind Arawali Marg, Indira Nagar, Lucknow – 226016
                   </div>
                 </div>
-              </div>
-              
-              {/* Email */}
-              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150">
-                <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
-                  ✉️ Official Email
-                </div>
-                <a 
-                  href="mailto:hellocommerceclass@gmail.com" 
-                  className="mt-1.5 font-bold text-white block hover:text-brand-lightGreen underline break-all"
-                >
-                  hellocommerceclass@gmail.com
-                </a>
-                <div className="text-[11.5px] text-slate-300 mt-1">
-                  Quick response for admissions & queries
+                <div>
+                  <a 
+                    href="https://maps.app.goo.gl/bbXyRwKK7zrQQtcz8" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-brand-lightGreen hover:text-black border border-white/20 text-brand-lightGreen text-[12px] font-bold transition"
+                  >
+                    📍 Open in Google Maps →
+                  </a>
                 </div>
               </div>
               
-              {/* Pinterest */}
-              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150">
-                <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
-                  📌 Pinterest & Study Notes
+              {/* Call & WhatsApp Card */}
+              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
+                    📞 Direct Faculty Line
+                  </div>
+                  <div className="mt-1.5 font-semibold text-white leading-[1.45]">
+                    Mon - Sat: 4:00 PM - 8:00 PM (Offline Coaching)
+                  </div>
                 </div>
-                <a 
-                  href="https://www.pinterest.com/bestcommerceclass/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="mt-1.5 font-bold text-[#FDA4AF] block hover:underline break-all"
-                >
-                  pinterest.com/bestcommerceclass/
-                </a>
-                <div className="text-[11.5px] text-slate-300 mt-1">
-                  Commerce infographics, formula sheets & tips
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <a 
+                    href="tel:+919838827833" 
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-brand-lightGreen hover:text-black border border-white/20 text-white text-[12px] font-bold transition"
+                  >
+                    📞 Call Faculty Now
+                  </a>
+                  <a 
+                    href="https://wa.me/919838827833?text=Hi%20Anjali%20Ma'am,%20I%20want%20to%20enquire%20about%20Commerce%20Batches"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366]/20 hover:bg-[#25D366] hover:text-white border border-[#25D366]/40 text-[#25D366] text-[12px] font-bold transition"
+                  >
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+              
+              {/* Email Desk Card */}
+              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
+                    ✉️ Admissions Email Desk
+                  </div>
+                  <div className="mt-1.5 font-medium text-slate-300 leading-[1.4]">
+                    Direct email responses for batch schedules, fees structure & admission enquiries.
+                  </div>
+                </div>
+                <div>
+                  <a 
+                    href="mailto:hellocommerceclass@gmail.com" 
+                    className="mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-lightGreen hover:text-black border border-white/20 text-white text-[12px] font-bold transition"
+                  >
+                    ✉️ Send Email Inquiry →
+                  </a>
+                </div>
+              </div>
+              
+              {/* Pinterest Notes Card */}
+              <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 flex flex-col justify-between">
+                <div>
+                  <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
+                    📌 Study Notes & Visuals
+                  </div>
+                  <div className="mt-1.5 font-medium text-slate-300 leading-[1.4]">
+                    Commerce infographics, formula cheat-sheets & exam preparation tips.
+                  </div>
+                </div>
+                <div>
+                  <a 
+                    href="https://www.pinterest.com/bestcommerceclass/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#E60023]/20 hover:bg-[#E60023] hover:text-white border border-[#E60023]/40 text-[#FDA4AF] text-[12px] font-bold transition"
+                  >
+                    📌 Explore Pinterest Notes →
+                  </a>
                 </div>
               </div>
 
-              {/* Netlify Site Link */}
+              {/* Netlify Site Link Card */}
               <div className="rounded-[16px] bg-white/10 border border-white/20 p-4 hover:bg-white/15 transition duration-150 sm:col-span-2">
                 <div className="text-brand-lightGreen text-[11px] uppercase tracking-widest font-extrabold">
-                  🌐 Online Course Portal
+                  🌐 Student Course Portal
                 </div>
-                <div className="mt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="mt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span className="text-[12.5px] text-slate-300 leading-[1.4]">
+                    Access syllabus archives, chapter test schedules, and student performance records.
+                  </span>
                   <a 
                     href="https://commerce-coaching-lucknow.netlify.app/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="font-bold text-white hover:text-brand-lightGreen underline break-all"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-brand-primary/20 hover:bg-brand-primary hover:text-white border border-brand-primary/40 text-brand-lightGreen text-[12.5px] font-bold transition whitespace-nowrap"
                   >
-                    https://commerce-coaching-lucknow.netlify.app/
+                    🌐 Launch Course Portal →
                   </a>
-                  <span className="text-[11px] text-slate-300">
-                    Additional syllabus files & performance archives
-                  </span>
                 </div>
               </div>
             </div>

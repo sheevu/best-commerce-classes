@@ -10,7 +10,7 @@ export default function Navbar({ onBookDemo }) {
     { label: 'Why Us', href: '#why' },
     { label: 'Analytics (New)', href: '/Infographics/commerce_tutorials_infographic_spa.html', isExternal: true, highlight: true },
     { label: 'Pinterest Notes', href: 'https://www.pinterest.com/bestcommerceclass/', isExternal: true },
-    { label: 'Other Contact', href: 'https://commerce-coaching-lucknow.netlify.app/', isExternal: true },
+    { label: 'Course Portal', href: 'https://commerce-coaching-lucknow.netlify.app/', isExternal: true },
     { label: 'Contact', href: '#contact' },
   ];
 

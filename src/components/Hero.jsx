@@ -299,7 +299,7 @@ export default function Hero({ onBookDemo }) {
               href="mailto:hellocommerceclass@gmail.com" 
               className="px-3.5 py-1.5 rounded-full bg-white border border-brand-dark/20 text-slate-700 hover:bg-brand-primary hover:text-white hover:border-brand-dark transition inline-flex items-center gap-1.5 shadow-xs"
             >
-              ✉️ hellocommerceclass@gmail.com
+              ✉️ Email Admissions Desk
             </a>
             <a 
               href="https://www.pinterest.com/bestcommerceclass/" 

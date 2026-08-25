@@ -32,10 +32,10 @@ export default function GoogleFormEmbed() {
           </p>
 
           {/* Mode Switcher Tabs */}
-          <div className="mt-6 inline-flex p-1 rounded-2xl bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold shadow-xs">
+          <div className="mt-6 w-full sm:w-auto grid grid-cols-1 sm:inline-flex p-1 rounded-2xl bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold shadow-xs">
             <button
               onClick={() => setFormMode('google')}
-              className={`px-5 py-2 rounded-xl transition-all ${
+              className={`w-full px-5 py-2.5 rounded-xl transition-all ${
                 formMode === 'google'
                   ? 'bg-brand-blue text-white shadow-sm'
                   : 'text-slate-600 hover:text-ink'
@@ -45,7 +45,7 @@ export default function GoogleFormEmbed() {
             </button>
             <button
               onClick={() => setFormMode('whatsapp')}
-              className={`px-5 py-2 rounded-xl transition-all ${
+              className={`w-full px-5 py-2.5 rounded-xl transition-all ${
                 formMode === 'whatsapp'
                   ? 'bg-[#25D366] text-white shadow-sm'
                   : 'text-slate-600 hover:text-ink'
@@ -79,6 +79,8 @@ export default function GoogleFormEmbed() {
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfPIQmjh1F3Dt6GD3TEz9EAwlaIPiVJKaKcBi46IK_c4CHCXA/viewform?embedded=true"
                 width="100%"
                 height="821"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
                 frameBorder="0"
                 marginHeight="0"
                 marginWidth="0"
@@ -134,7 +136,7 @@ export default function GoogleFormEmbed() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-ink mb-1">
                     Select Class

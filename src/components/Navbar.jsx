@@ -141,7 +141,7 @@ export default function Navbar({ onBookDemo, onSelectSubPage }) {
   };
 
   return (
-    <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <nav className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8 h-[76px] flex items-center justify-between gap-4">
         
         {/* Brand Logo & Name */}

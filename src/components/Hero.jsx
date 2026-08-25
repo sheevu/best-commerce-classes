@@ -78,7 +78,7 @@ export default function Hero({ onBookDemo }) {
           </div>
 
           {/* Right Column: Animated Motion Graphics Visual */}
-          <div className="relative flex items-center justify-center min-h-[480px] lg:min-h-[560px]">
+          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[480px] lg:min-h-[560px] mt-4 lg:mt-0">
             
             {/* Floating Orb 1 (A+ Top Right) */}
             <div className="animate-orb1 absolute -top-4 right-2 sm:right-6 z-20 h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-gradient-to-br from-brand-orange to-amber-500 text-white font-serif font-bold text-2xl sm:text-3xl flex items-center justify-center shadow-glowAmber">

@@ -3,13 +3,8 @@ name = "best-commerce-classes"
 compatibility_date = "2026-08-16"
 workers_dev = true
 
-[[routes]]
-pattern = "bestcommerceprep.in"
-custom_domain = true
-
-[[routes]]
-pattern = "www.bestcommerceprep.in"
-custom_domain = true
+# Custom domains are managed in the Cloudflare account that owns their DNS
+# zones. Keep this build account limited to the Worker deployment itself.
 
 
 [assets]
